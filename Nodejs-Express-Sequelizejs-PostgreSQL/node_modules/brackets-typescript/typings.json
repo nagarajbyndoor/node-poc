@@ -1,0 +1,10 @@
+{
+  "name": "brackets-typescript",
+  "dependencies": {
+    "lodash": "registry:npm/lodash#4.0.0+20160723033700"
+  },
+  "globalDependencies": {
+    "jquery": "registry:dt/jquery#1.10.0+20160704162008",
+    "node": "registry:dt/node#0.10.1+20160720000508"
+  }
+}

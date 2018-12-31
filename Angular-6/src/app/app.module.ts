@@ -7,22 +7,22 @@ import { HttpClientModule }    from '@angular/common/http';
 import { AppRoutingModule }     from './app-routing/app-routing.module';
 
 import { AppComponent } from './app.component';
-import { CustomerComponent } from './customer/customer.component';
-import { CustomerDetailsComponent } from './customer-details/customer-details.component';
-import { AddCustomerComponent } from './add-customer/add-customer.component';
+import { ProfileComponent } from './profile/profile.component';
+import { ProfileDetailsComponent } from './profile-details/profile-details.component';
+import { AddProfileComponent } from './add-profile/add-profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CustomerComponent,
-    CustomerDetailsComponent,
-    AddCustomerComponent
+    ProfileComponent,
+    ProfileDetailsComponent,
+    AddProfileComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

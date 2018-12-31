@@ -1,0 +1,352 @@
+<div class="container emp-profile">
+            <form method="post">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="profile-img">
+                            <img src="{{profile.imagePath}}" alt=""/>
+<!--
+                            <div class="file btn btn-lg btn-primary">
+                                Change Photo
+                                <input type="file" name="file"/>
+                            </div>
+-->
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="col-md-6 float-left">
+                                        <h5 class="mt-4">
+                                            {{profile.firstname}} {{profile.lastname}}
+                                        </h5>
+                                        <h6 class="mt-4">
+                                             {{profile.role}}
+                                        </h6>
+                                        <h6 class="mt-4">
+                                            Ranking:{{profile.ranking}}
+                                        </h6>    
+                                    </div>
+                                        <div class="col-md-6 float-right">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>  
+                        <ul class="nav nav-tabs mt-5" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Timeline</a>
+                                </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-info" name="btnAddMore" value="Edit Profile" data-toggle="collapse" data-target="#editProfile" role="button" aria-expanded="false">Edit Profile</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 mt-5 mb-5">
+                        <div class="profile-work">
+                            <p>WORK LINK</p>
+                            <a href="">Website Link</a><br/>
+                            <a href="">Bootsnipp Profile</a><br/>
+                            <a href="">Bootply Profile</a>
+                            <p class="mt-5">SKILLS</p>
+                            <a href="">Web Designer</a><br/>
+                            <a href="">Web Developer</a><br/>
+                            <a href="">WordPress</a><br/>
+                            <a href="">WooCommerce</a><br/>
+                            <a href="">PHP, .Net</a><br/>
+                        </div>
+                    </div>
+                    <div class="col-md-8 font-weight-bold">
+                        <div class="tab-content profile-tab" id="myTabContent">
+                            <div class="tab-pane fade show active mt-4" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Profile Id</label>
+                                            </div>
+                                            <div class="col-md-6 text-primary">
+                                                <p>{{profile.profileId}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Name:</label>
+                                            </div>
+                                            <div class="col-md-6 text-primary">
+                                                <p>{{profile.firstname}} {{profile.lastname}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Email:</label>
+                                            </div>
+                                            <div class="col-md-6 text-primary">
+                                                <p>{{profile.email}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Phone:</label>
+                                            </div>
+                                            <div class="col-md-6 text-primary">
+                                                <p>+91 {{profile.phone}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Role:</label>
+                                            </div>
+                                            <div class="col-md-6 text-primary">
+                                                <p>{{profile.role}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Skills:</label>
+                                            </div>
+                                            <div class="col-md-6 text-primary">
+                                                <p>{{profile.skills}}</p>
+                                            </div>
+                                        </div>
+                            </div>
+                            <div class="tab-pane fade mt-4" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Experience:</label>
+                                            </div>
+                                            <div class="col-md-6 text-primary">
+                                                <p>Expert</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Hourly Rate:</label>
+                                            </div>
+                                            <div class="col-md-6 text-primary">
+                                                <p>10$/hr</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Total Projects:</label>
+                                            </div>
+                                            <div class="col-md-6 text-primary">
+                                                <p>230</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>English Level:</label>
+                                            </div>
+                                            <div class="col-md-6 text-primary">
+                                                <p>Expert</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Availability:</label>
+                                            </div>
+                                            <div class="col-md-6 text-primary">
+                                                <p>6 months</p>
+                                            </div>
+                                        </div>
+                                <div class="row mt-5">
+                                    <div class="col-md-12">
+                                        <label>Reviews:</label><br/>
+                                        <p class="font-weight-light">{{profile.reviews}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>           
+</div>
+<div [hidden]="!submitted">
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+       <strong>{{message}}</strong>
+       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+       </button>
+    </div>
+</div>
+<div class="conatiner">
+    <div class="row mb-5 d-flex justify-content-between">
+        <button type="button" class="btn btn-info ml-4" (click)="goBack()">Back</button>
+        <button type="button" class="btn btn-danger" (click)="delete()">Delete</button>
+    </div>
+</div>
+<hr>
+<div class="conatiner collapse card card-body mt-5" id="editProfile" aria-expanded="false" aria-controls="editProfile">
+    <div class="row">
+     <div class="col-sm-12" [hidden]="submitted">
+        <form #detailProfileForm="ngForm">
+            <div class="form-group">
+                <div class="conatiner">
+                    <div class="row">
+                        <div class="col-sm-6">
+                          <div class="form-group">
+                                <label for="firstname">First Name</label>
+                                <input type="text" class="form-control" id="firstname" placeholder="Give profile's FirstName" 
+                                required
+                                [(ngModel)]="profile.firstname" name="firstname" #firstname="ngModel">
+                                <div [hidden]="firstname.valid || firstname.pristine"
+                                     class="alert alert-danger">
+                                    First Name is required
+                                </div>
+                          </div>    
+
+                          <div class="form-group">
+                            <label for="lastname">Last Name</label>
+                            <input type="text" class="form-control" id="lastname" placeholder="Give profile's LastName"
+                            required
+                            [(ngModel)]="profile.lastname" name="lastname" #lastname="ngModel">
+                            <div [hidden]="lastname.valid || lastname.pristine"
+                                 class="alert alert-danger">
+                                Last Name is required
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="profileId">profile Id</label>
+                            <input type="number" class="form-control" id="profileNumber" 
+                            placeholder="Give profile's profile Number"
+                            required
+                            [(ngModel)]="profile.profileId" name="profileId" #profileId="ngModel">
+                            <div [hidden]="profileId.valid || profileId.pristine"
+                                 class="alert alert-danger">
+                                profile Id is required
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="age">Age</label>
+                            <input type="number" class="form-control" id="age" 
+                            placeholder="Give profile's Age"
+                            required
+                            [(ngModel)]="profile.age" name="age" #age="ngModel">
+                            <div [hidden]="age.valid || age.pristine"
+                                 class="alert alert-danger">
+                                Age is required
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="text" class="form-control" id="phone" 
+                            placeholder="Give profile's Phone Number"
+                            required
+                            [(ngModel)]="profile.phone" name="phone" #phone="ngModel">
+                            <div [hidden]="phone.valid || phone.pristine"
+                                 class="alert alert-danger">
+                                Phone Number is required
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="text" class="form-control" id="email" 
+                            placeholder="Give profile's Email"
+                            required
+                            [(ngModel)]="profile.email" name="email" #email="ngModel">
+                            <div [hidden]="email.valid || email.pristine"
+                                 class="alert alert-danger">
+                                Email is required
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="role">Role</label>
+                            <input type="textarea" class="form-control" id="role" placeholder="Give profile's Role"
+                            required
+                            [(ngModel)]="profile.role" name="role" #role="ngModel">
+                            <div [hidden]="role.valid || role.pristine"
+                                 class="alert alert-danger">
+                                Role is required
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" class="form-control" id="city" placeholder="Give profile's City"
+                            requiredAddress
+                            [(ngModel)]="profile.city" name="city" #city="ngModel">
+                            <div [hidden]="city.valid || city.pristine"
+                                 class="alert alert-danger">
+                                City is required
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="state">Skills</label>
+                            <input type="text" class="form-control" id="skills" placeholder="Give profile's Skills"
+                            required
+                            [(ngModel)]="profile.skills" name="skills" #skills="ngModel">
+                            <div [hidden]="skills.valid || skills.pristine"
+                                 class="alert alert-danger">
+                                Skills are required
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="skills">Skills</label>
+                            <input type="text" class="form-control" id="skills" placeholder="Give profile's Skills"
+                            required
+                            [(ngModel)]="profile.skills" name="skills" #skills="ngModel">
+                            <div [hidden]="skills.valid || skills.pristine"
+                                 class="alert alert-danger">
+                                Skills are required
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="ranking">Postal Code</label>
+                            <input type="number" class="form-control" id="ranking" 
+                            placeholder="Give profile's ranking"
+                            required
+                            [(ngModel)]="profile.ranking" name="ranking" #ranking="ngModel">
+                            <div [hidden]="ranking.valid || ranking.pristine"
+                                 class="alert alert-danger">
+                                Ranking is required
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="reviews">Reviews</label>
+                            <input type="textarea" class="form-control" id="reviews" placeholder="Give profile's Reviews"
+                            required
+                            [(ngModel)]="profile.reviews" name="reviews" #reviews="ngModel">
+                            <div [hidden]="reviews.valid || reviews.pristine"
+                                 class="alert alert-danger">
+                                Reviews is required
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="imagePath">Image Upload</label>
+                            <input type="text" class="form-control" id="imagePath" placeholder="Give profile's Image"
+                            required
+                            [(ngModel)]="profile.imagePath" name="imagePath" #imagePath="ngModel">
+                            <div [hidden]="imagePath.valid || imagePath.pristine"
+                                 class="alert alert-danger">
+                                Image path is required
+                            </div>
+                         </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="btn-group btn-group-sm">
+                                <button type="button" class="btn btn-primary" (click)="update()" [disabled]="!detailProfileForm.form.valid">Update</button>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </form>
+     </div>
+    </div>
+</div>    

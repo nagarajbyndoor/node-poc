@@ -1,25 +1,25 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CustomerComponent } from '../customer/customer.component';
-import { AddCustomerComponent } from '../add-customer/add-customer.component';
-import { CustomerDetailsComponent } from '../customer-details/customer-details.component';
+import { ProfileComponent } from '../profile/profile.component';
+import { AddProfileComponent } from '../add-profile/add-profile.component';
+import { ProfileDetailsComponent } from '../profile-details/profile-details.component';
 
 const routes: Routes = [
    { 
-     path: 'customers', 
-     component: CustomerComponent 
+     path: 'profiles', 
+     component: ProfileComponent 
    },
    { 
-     path: 'customer/add', 
-     component: AddCustomerComponent 
+     path: 'profile/add', 
+     component: AddProfileComponent 
    },
    { 
-     path: 'customers/:id', 
-     component: CustomerDetailsComponent 
+     path: 'profiles/:id', 
+     component: ProfileDetailsComponent 
    },
    { 
      path: '', 
-     redirectTo: 'customers', 
+     redirectTo: 'profiles', 
      pathMatch: 'full'
    }, 
 ];

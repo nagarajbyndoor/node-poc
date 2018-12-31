@@ -1,13 +1,42 @@
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-info static-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+          <img src="assets/logo.png" class="img-fluid" alt="">
+        </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home
+                <span class="sr-only">(current)</span>
+              </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- /.container -->
 <div class="container">
   <div class="row">
-    <div class="col-sm-4">  
-      <h1>Angular HttpClient</h1>
+    <div class="col-sm-12">  
       <ul class="nav justify-content-center">
           <li class="nav-item">
-              <a routerLink="customers" class="btn btn-light btn-sm" role="button" routerLinkActive="active">Retrieve</a> 
+              <a routerLink="profiles" class="btn btn-light btn-sm" role="button" routerLinkActive="active">Retrieve</a> 
           </li>
           <li class="nav-item">
-              <a routerLink="customer/add" class="btn btn-light btn-sm" role="button" routerLinkActive="active">Create</a>
+              <a routerLink="profile/add" class="btn btn-light btn-sm" role="button" routerLinkActive="active">Create</a>
           </li>
       </ul>
       <hr>
@@ -15,3 +44,10 @@
     </div>
   </div>
 </div>
+<footer class="bg-info mt-5">
+ <div class="footer-copyright text-center py-3 text-light">© 2019 Copyright:
+    <a href="https://www.pennymacusa.com/" target="_blank" rel="noopener" class="text-dark"> Pennymac POC</a>
+  </div>
+</footer>
+
+

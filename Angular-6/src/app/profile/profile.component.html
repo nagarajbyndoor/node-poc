@@ -1,0 +1,17 @@
+<div class="conatainer">
+    <div class="row">
+        <div class="col-sm-4" *ngFor="let prof of profiles ">
+            <a [routerLink]="['/profiles', prof.id]" style="color:black">
+                <div class="card mt-4" style="width: 18rem;">
+                  <img class="img-fluid" src="{{prof.imagePath}}" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">{{prof.firstname}} {{prof.lastname}}</h5>
+                      <p class="card-text"><span>Ranking: <span>{{ prof.ranking }}/</span>10</span></p>
+                      <p class="card-text"><span>{{prof.role}}</span></p>
+                    <button href="#" class="btn btn-info">View Profile</button>
+                  </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>

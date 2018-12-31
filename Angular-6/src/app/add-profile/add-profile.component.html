@@ -1,0 +1,174 @@
+<h3>Add profile</h3>
+<div [hidden]="submitted">
+    <form #addProfileForm="ngForm">
+      <div class="form-group">
+          <div class="conatiner">
+            <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group">
+                        <label for="firstname">First Name</label>
+                        <input type="text" class="form-control" id="firstname" placeholder="Give profile's FirstName" 
+                        required
+                        [(ngModel)]="profile.firstname" name="firstname" #firstname="ngModel">
+                        <div [hidden]="firstname.valid || firstname.pristine"
+                             class="alert alert-danger">
+                            First Name is required
+                        </div>
+                    </div>    
+
+                  <div class="form-group">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" class="form-control" id="lastname" placeholder="Give profile's LastName"
+                    required
+                    [(ngModel)]="profile.lastname" name="lastname" #lastname="ngModel">
+                    <div [hidden]="lastname.valid || lastname.pristine"
+                         class="alert alert-danger">
+                        Last Name is required
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="profileId">profile Id</label>
+                    <input type="number" class="form-control" id="profileNumber" 
+                    placeholder="Give profile's profile Number"
+                    required
+                    [(ngModel)]="profile.profileId" name="profileId" #profileId="ngModel">
+                    <div [hidden]="profileId.valid || profileId.pristine"
+                         class="alert alert-danger">
+                        profile Id is required
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" class="form-control" id="age" 
+                    placeholder="Give profile's Age"
+                    required
+                    [(ngModel)]="profile.age" name="age" #age="ngModel">
+                    <div [hidden]="age.valid || age.pristine"
+                         class="alert alert-danger">
+                        Age is required
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="text" class="form-control" id="phone" 
+                    placeholder="Give profile's Phone Number"
+                    required
+                    [(ngModel)]="profile.phone" name="phone" #phone="ngModel">
+                    <div [hidden]="phone.valid || phone.pristine"
+                         class="alert alert-danger">
+                        Phone Number is required
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" class="form-control" id="email" 
+                    placeholder="Give profile's Email"
+                    required
+                    [(ngModel)]="profile.email" name="email" #email="ngModel">
+                    <div [hidden]="email.valid || email.pristine"
+                         class="alert alert-danger">
+                        Email is required
+                    </div>
+                  </div>
+                    
+                   <div class="form-group">
+                    <label for="role">Role</label>
+                    <input type="textarea" class="form-control" id="role" placeholder="Give profile's Role"
+                    required
+                    [(ngModel)]="profile.role" name="role" #role="ngModel">
+                    <div [hidden]="role.valid || role.pristine"
+                         class="alert alert-danger">
+                        Role is required
+                    </div>
+                  </div>
+                    
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" class="form-control" id="city" placeholder="Give profile's City"
+                    requiredAddress
+                    [(ngModel)]="profile.city" name="city" #city="ngModel">
+                    <div [hidden]="city.valid || city.pristine"
+                         class="alert alert-danger">
+                        City is required
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="state">Skills</label>
+                    <input type="text" class="form-control" id="skills" placeholder="Give profile's Skills"
+                    required
+                    [(ngModel)]="profile.skills" name="skills" #skills="ngModel">
+                    <div [hidden]="skills.valid || skills.pristine"
+                         class="alert alert-danger">
+                        Skills are required
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="country">Country</label>
+                    <input type="text" class="form-control" id="country" placeholder="Give profile's Country"
+                    required
+                    [(ngModel)]="profile.country" name="country" #country="ngModel">
+                    <div [hidden]="country.valid || country.pristine"
+                         class="alert alert-danger">
+                        Country is required
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="ranking">Postal Code</label>
+                    <input type="number" class="form-control" id="ranking" 
+                    placeholder="Give profile's ranking"
+                    required
+                    [(ngModel)]="profile.ranking" name="ranking" #ranking="ngModel">
+                    <div [hidden]="ranking.valid || ranking.pristine"
+                         class="alert alert-danger">
+                        Ranking is required
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="reviews">Reviews</label>
+                    <input type="textarea" class="form-control" id="reviews" placeholder="Give profile's Reviews"
+                    required
+                    [(ngModel)]="profile.reviews" name="reviews" #reviews="ngModel">
+                    <div [hidden]="reviews.valid || reviews.pristine"
+                         class="alert alert-danger">
+                        Reviews is required
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="imagePath">Image Upload</label>
+                    <input type="text" class="form-control" id="imagePath" placeholder="Give profile's Image"
+                    required
+                    [(ngModel)]="profile.imagePath" name="imagePath" #imagePath="ngModel">
+                    <div [hidden]="imagePath.valid || imagePath.pristine"
+                         class="alert alert-danger">
+                        Image Path is required
+                    </div>
+                </div>
+            </div>
+          </div>
+      </div>
+    </div>      
+      <div class="btn-group btn-group-sm btn-group-sm d-flex justify-content-between">
+      	<button type="button" class="btn btn-info" (click)="goBack()">Back</button>
+      	<button type="button" class="btn btn-primary" (click)="addProfile()" [disabled]="!addProfileForm.form.valid">Add</button>
+      </div>
+    </form>
+</div>
+
+<div [hidden]="!submitted">
+  <p>Submitted Successfully! -> <span class="badge badge-light">{{profile.firstname}}  {{profile.lastname}}</span></p>
+	<div class="btn-group btn-group-sm d-flex justify-content-between">
+    	<button type="button" class="btn btn-info" (click)="goBack()">Back</button>
+    	<button type="button" class="btn btn-primary" (click)="newProfile(); addProfileForm.reset()">Continue</button>
+    </div>
+</div>
