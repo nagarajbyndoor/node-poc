@@ -1,0 +1,12 @@
+/* footer */
+#footer-container {
+    color: #fff;
+    width: 100%;
+    overflow: hidden;
+    font-family: 'ZillaSlab' Georgia, serif;
+    background: #4c4c4c;
+    text-align: center;
+    padding: 3px;
+}
+
+

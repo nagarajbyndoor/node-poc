@@ -20,6 +20,7 @@ db.sequelize.sync({force: true}).then(() => {
 });
  
 require('./app/route/profile.route.js')(app);
+require('./app/route/user.route.js')(app);
  
 // Create a Server
 var server = app.listen(8080, function () {
@@ -139,10 +140,25 @@ var server = app.listen(8080, function () {
        imagePath: "./assets/cust-7.jpeg"
      }
    ]
+   let users = [
+       {
+        email: "admin@admin.com",
+        password: "admin@123"
+       },
+       {
+        email: "admin1@admin.com",
+        password: "admin1@123"
+       } 
+   ]
  
    // Init data -> save to MySQL
    const Profile = db.profiles;
    for (let i = 0; i < profiles.length; i++) { 
      Profile.create(profiles[i]);  
+   }
+    
+   const User = db.users;
+   for (let i = 0; i < users.length; i++) { 
+     User.create(users[i]);  
    }
  }

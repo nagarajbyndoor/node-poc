@@ -1,0 +1,28 @@
+<div class="container">
+        <hr/>
+        <div class="row justify-content-center">
+          <div class="card">
+              <div class="card-block">
+                <h4 class="card-title text-muted mt-2 mb-4">Login To Your Account</h4>
+                <form   #signIn= "ngForm" novalidate [formGroup]="form" (ngSubmit)="login(signIn.value)">
+                        <div class="form-group">
+                            <label>User Name</label>
+                            <input type="email" name="email" placeholder="Email Address" class="form-control mb-3" formControlName="email">
+                            <div *ngIf="form.controls['email'].hasError('required') && form.controls['email'].touched" class="alert alert-danger">You must include a email id.</div>
+                            <label>Password</label>
+                            <input type="password" name="pass" placeholder="Password" class="form-control mb-3" formControlName="password">
+                            <div *ngIf="form.controls['password'].hasError('required') && form.controls['password'].touched" class="alert alert-danger">You must include password.</div>
+                            <br>
+                            <div *ngIf="isLoginError" class="alert alert-danger">Email Id and Password are Incorrect! Please try again!</div>
+                            <input type="submit" name="login" class="btn btn-info" value="login">
+                            <div class="mt-2">
+                                New User? <span routerlink="signup" class="text-muted" (click)="signUp()">Register here!!</span>
+                            </div>
+                        </div>
+                </form>     
+              </div>
+          </div>
+        </div>
+        <hr/>
+    <br><br><br><br><br><br><br><br>
+</div>       
