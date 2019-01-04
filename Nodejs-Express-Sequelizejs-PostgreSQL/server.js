@@ -45,21 +45,23 @@ var server = app.listen(8080, function () {
        city: "Bangalore",
        state: "Karnataka",
        skills: "Angular, ReactJS, JavaScript, HTML5, CSS3, Bootstrap and Git",
+       experience: "3.5",
        ranking: 8,
        reviews: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lacinia ligula sollicitudin lectus congue sagittis. Donec nec maximus mauris, sed finibus lectus. Etiam consequat eu mauris non suscipit.",
        imagePath: "./assets/cust-1.jpeg"
      },
      {
-       firstname: "Peter",
+       firstname: "Sophia",
        lastname: "Smith",
        age: 18,
-       profileID: "Peter2019",
+       profileId: "Peter2019",
        phone: "9162734321",
        email: "info2@dummy.com",
        role: "Business Analyst",
        city: "Delhi",
        state: "Delhi",
        skills: "Etiam, consequat eu, mauris, non and suscipit",
+       experience: "4.0",
        ranking: 7,
        reviews: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lacinia ligula sollicitudin lectus congue sagittis. Donec nec maximus mauris, sed finibus lectus. Etiam consequat eu mauris non suscipit.",
        imagePath: "./assets/cust-2.jpeg"
@@ -75,6 +77,7 @@ var server = app.listen(8080, function () {
        city: "Pune",
        state: "Maharastra",
        skills: "Photoshop,HTML5, CSS3, Bootstrap and Git",
+       experience: "5.5",
        ranking: 7,
        reviews: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lacinia ligula sollicitudin lectus congue sagittis. Donec nec maximus mauris, sed finibus lectus. Etiam consequat eu mauris non suscipit.",
        imagePath: "./assets/cust-3.jpeg"
@@ -89,7 +92,8 @@ var server = app.listen(8080, function () {
        role: ".Net Developer",
        city: "Chenai",
        state: "Tamilnadu",
-       skills: ">Net Core, C#, mySQl, WebApi and Git",
+       skills: ".Net Core, C#, mySQl, WebApi and Git",
+       experience: "2.11",
        ranking: 8,
        reviews: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lacinia ligula sollicitudin lectus congue sagittis. Donec nec maximus mauris, sed finibus lectus. Etiam consequat eu mauris non suscipit.",
        imagePath: "./assets/cust-4.jpeg"
@@ -104,7 +108,8 @@ var server = app.listen(8080, function () {
        role: "Ruby Developer",
        city: "Bangalore",
        state: "Bangalore",
-       skills: "India",
+       skills: "Etiam, consequat eu, mauris, non and suscipit",
+       experience: "4.6",
        ranking: 7,
        reviews: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lacinia ligula sollicitudin lectus congue sagittis. Donec nec maximus mauris, sed finibus lectus. Etiam consequat eu mauris non suscipit.",
        imagePath: "./assets/cust-5.jpeg"
@@ -120,24 +125,42 @@ var server = app.listen(8080, function () {
        city: "Goa",
        state: "Goa",
        skills: "Etiam, consequat eu, mauris, non and suscipit",
+       experience: "4.10",
        ranking: 9,
        reviews: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lacinia ligula sollicitudin lectus congue sagittis. Donec nec maximus mauris, sed finibus lectus. Etiam consequat eu mauris non suscipit.",
        imagePath: "./assets/cust-6.jpeg"
      },
      {
-       firstname: "Michael",
+       firstname: "Amelia",
        lastname: "Brown",
        age: 45,
-       profileId: "Michael2019",
+       profileId: "Amelia2019",
        phone: "8724671524",
        email: "info7@dummy.com",
        role: "Software Tester",
        city: "Udupi",
        state: "Karnataka",
        skills: "Manualt Testing, Selenium, QTP, Cocumber and Jenkyn",
+       experience: "7.4",
        ranking: 8,
        reviews: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lacinia ligula sollicitudin lectus congue sagittis. Donec nec maximus mauris, sed finibus lectus. Etiam consequat eu mauris non suscipit.",
        imagePath: "./assets/cust-7.jpeg"
+     },
+     {
+       firstname: "Devid",
+       lastname: "Ava",
+       age: 45,
+       profileId: "Devid2019",
+       phone: "8724671524",
+       email: "info7@dummy.com",
+       role: "Python Developer",
+       city: "Udupi",
+       state: "Kerala",
+       skills: "Etiam, consequat eu, mauris, non and suscipit",
+       experience: "3.4",
+       ranking: 7,
+       reviews: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lacinia ligula sollicitudin lectus congue sagittis. Donec nec maximus mauris, sed finibus lectus. Etiam consequat eu mauris non suscipit.",
+       imagePath: "./assets/cust-9.jpeg"
      }
    ]
    let users = [

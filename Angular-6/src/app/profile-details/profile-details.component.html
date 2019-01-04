@@ -12,7 +12,7 @@
 -->
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-5">
                         <div class="container">
                                 <div class="row">
                                     <div class="col-md-12">
@@ -20,11 +20,11 @@
                                         <h5 class="mt-4">
                                             {{profile.firstname}} {{profile.lastname}}
                                         </h5>
-                                        <h6 class="mt-4">
+                                        <h6 class="mt-4 font-weight-bold text-info">
                                              {{profile.role}}
                                         </h6>
                                         <h6 class="mt-4">
-                                            Ranking:{{profile.ranking}}
+                                            Ranking: {{profile.ranking}}/10
                                         </h6>    
                                     </div>
                                         <div class="col-md-6 float-right">
@@ -42,8 +42,11 @@
                                 </li>
                         </ul>
                     </div>
-                    <div class="col-md-2">
-                        <button class="btn btn-info" name="btnAddMore" value="Edit Profile" data-toggle="collapse" data-target="#editProfile"  role="button" aria-expanded="false">Edit Profile</button>
+                    <div class="col-md-1">
+                        <button class="btn btn-info ml-1" name="btnAddMore" value="Edit Profile" data-toggle="collapse" data-target="#editProfile"  role="button" aria-expanded="false">Edit Profile</button>
+                    </div>
+                    <div class="col-md-1">
+                        <button type="button" class="btn btn-danger ml-2" (click)="delete()">Delete</button>
                     </div>
                 </div>
                 <div class="row">
@@ -119,7 +122,7 @@
                                                 <label>Experience:</label>
                                             </div>
                                             <div class="col-md-6 text-primary">
-                                                <p>Expert</p>
+                                                <p>{{profile.experience}}</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -135,23 +138,23 @@
                                                 <label>Total Projects:</label>
                                             </div>
                                             <div class="col-md-6 text-primary">
-                                                <p>230</p>
+                                                <p>5</p>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label>English Level:</label>
+                                                <label>City:</label>
                                             </div>
                                             <div class="col-md-6 text-primary">
-                                                <p>Expert</p>
+                                                <p>{{profile.city}}</p>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label>Availability:</label>
+                                                <label>State:</label>
                                             </div>
                                             <div class="col-md-6 text-primary">
-                                                <p>6 months</p>
+                                                <p>{{profile.state}}</p>
                                             </div>
                                         </div>
                                 <div class="row mt-5">
@@ -177,7 +180,7 @@
 <div class="conatiner">
     <div class="row mb-5 d-flex justify-content-between">
         <button type="button" class="btn btn-info ml-4" (click)="goBack()">Back</button>
-        <button type="button" class="btn btn-danger" (click)="delete()">Delete</button>
+        <button type="button" class="btn btn-info float-right" (click)="logout()">Logout</button>
     </div>
 </div>
 <hr>
@@ -188,162 +191,158 @@
             <div class="form-group">
                 <div class="conatiner">
                     <div class="row">
-                        <div class="col-sm-6">
-                          <div class="form-group">
-                                <label for="firstname">First Name</label>
-                                <input type="text" class="form-control" id="firstname" placeholder="Give profile's FirstName" 
-                                required
-                                [(ngModel)]="profile.firstname" name="firstname" #firstname="ngModel">
-                                <div [hidden]="firstname.valid || firstname.pristine"
-                                     class="alert alert-danger">
-                                    First Name is required
-                                </div>
-                          </div>    
-
-                          <div class="form-group">
-                            <label for="lastname">Last Name</label>
-                            <input type="text" class="form-control" id="lastname" placeholder="Give profile's LastName"
-                            required
-                            [(ngModel)]="profile.lastname" name="lastname" #lastname="ngModel">
-                            <div [hidden]="lastname.valid || lastname.pristine"
-                                 class="alert alert-danger">
-                                Last Name is required
-                            </div>
-                          </div>
-
-                          <div class="form-group">
-                            <label for="profileId">profile Id</label>
-                            <input type="number" class="form-control" id="profileNumber" 
-                            placeholder="Give profile's profile Number"
-                            required
-                            [(ngModel)]="profile.profileId" name="profileId" #profileId="ngModel">
-                            <div [hidden]="profileId.valid || profileId.pristine"
-                                 class="alert alert-danger">
-                                profile Id is required
-                            </div>
-                          </div>
-
-                          <div class="form-group">
-                            <label for="age">Age</label>
-                            <input type="number" class="form-control" id="age" 
-                            placeholder="Give profile's Age"
-                            required
-                            [(ngModel)]="profile.age" name="age" #age="ngModel">
-                            <div [hidden]="age.valid || age.pristine"
-                                 class="alert alert-danger">
-                                Age is required
-                            </div>
-                          </div>
-
-                          <div class="form-group">
-                            <label for="phone">Phone</label>
-                            <input type="text" class="form-control" id="phone" 
-                            placeholder="Give profile's Phone Number"
-                            required
-                            [(ngModel)]="profile.phone" name="phone" #phone="ngModel">
-                            <div [hidden]="phone.valid || phone.pristine"
-                                 class="alert alert-danger">
-                                Phone Number is required
-                            </div>
-                          </div>
-
-                          <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="text" class="form-control" id="email" 
-                            placeholder="Give profile's Email"
-                            required
-                            [(ngModel)]="profile.email" name="email" #email="ngModel">
-                            <div [hidden]="email.valid || email.pristine"
-                                 class="alert alert-danger">
-                                Email is required
-                            </div>
-                          </div>
-
-                          <div class="form-group">
-                            <label for="role">Role</label>
-                            <input type="textarea" class="form-control" id="role" placeholder="Give profile's Role"
-                            required
-                            [(ngModel)]="profile.role" name="role" #role="ngModel">
-                            <div [hidden]="role.valid || role.pristine"
-                                 class="alert alert-danger">
-                                Role is required
-                            </div>
-                          </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                        <label for="firstname">First Name</label>
+                        <input type="text" class="form-control" id="firstname" placeholder="Give profile's FirstName" 
+                        required
+                        [(ngModel)]="profile.firstname" name="firstname" #firstname="ngModel">
+                        <div [hidden]="firstname.valid || firstname.pristine"
+                             class="alert alert-danger">
+                            First Name is required
                         </div>
-                        <div class="col-sm-6">
-                          <div class="form-group">
-                            <label for="city">City</label>
-                            <input type="text" class="form-control" id="city" placeholder="Give profile's City"
-                            requiredAddress
-                            [(ngModel)]="profile.city" name="city" #city="ngModel">
-                            <div [hidden]="city.valid || city.pristine"
-                                 class="alert alert-danger">
-                                City is required
-                            </div>
-                          </div>
+                    </div>    
 
-                          <div class="form-group">
-                            <label for="state">Skills</label>
-                            <input type="text" class="form-control" id="skills" placeholder="Give profile's Skills"
-                            required
-                            [(ngModel)]="profile.skills" name="skills" #skills="ngModel">
-                            <div [hidden]="skills.valid || skills.pristine"
-                                 class="alert alert-danger">
-                                Skills are required
-                            </div>
-                          </div>
-
-                          <div class="form-group">
-                            <label for="skills">Skills</label>
-                            <input type="text" class="form-control" id="skills" placeholder="Give profile's Skills"
-                            required
-                            [(ngModel)]="profile.skills" name="skills" #skills="ngModel">
-                            <div [hidden]="skills.valid || skills.pristine"
-                                 class="alert alert-danger">
-                                Skills are required
-                            </div>
-                          </div>
-
-                          <div class="form-group">
-                            <label for="ranking">Postal Code</label>
-                            <input type="number" class="form-control" id="ranking" 
-                            placeholder="Give profile's ranking"
-                            required
-                            [(ngModel)]="profile.ranking" name="ranking" #ranking="ngModel">
-                            <div [hidden]="ranking.valid || ranking.pristine"
-                                 class="alert alert-danger">
-                                Ranking is required
-                            </div>
-                          </div>
-
-                          <div class="form-group">
-                            <label for="reviews">Reviews</label>
-                            <input type="textarea" class="form-control" id="reviews" placeholder="Give profile's Reviews"
-                            required
-                            [(ngModel)]="profile.reviews" name="reviews" #reviews="ngModel">
-                            <div [hidden]="reviews.valid || reviews.pristine"
-                                 class="alert alert-danger">
-                                Reviews is required
-                            </div>
-                          </div>
-
-                          <div class="form-group">
-                            <label for="imagePath">Image Upload</label>
-                            <input type="text" class="form-control" id="imagePath" placeholder="Give profile's Image"
-                            required
-                            [(ngModel)]="profile.imagePath" name="imagePath" #imagePath="ngModel">
-                            <div [hidden]="imagePath.valid || imagePath.pristine"
-                                 class="alert alert-danger">
-                                Image path is required
-                            </div>
-                         </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="btn-group btn-group-sm">
-                                <button type="button" class="btn btn-primary" (click)="update()" [disabled]="!detailProfileForm.form.valid">Update</button>
-                            </div> 
-                        </div>
+                  <div class="form-group">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" class="form-control" id="lastname" placeholder="Give profile's LastName"
+                    required
+                    [(ngModel)]="profile.lastname" name="lastname" #lastname="ngModel">
+                    <div [hidden]="lastname.valid || lastname.pristine"
+                         class="alert alert-danger">
+                        Last Name is required
                     </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="profileId">Profile Id</label>
+                    <input type="text" class="form-control" id="profileNumber" 
+                    placeholder="Give profile's profile Number"
+                    required
+                    [(ngModel)]="profile.profileId" name="profileId" #profileId="ngModel">
+                    <div [hidden]="profileId.valid || profileId.pristine"
+                         class="alert alert-danger">
+                        Profile Id is required
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" class="form-control" id="age" 
+                    placeholder="Give profile's Age"
+                    required
+                    [(ngModel)]="profile.age" name="age" #age="ngModel">
+                    <div [hidden]="age.valid || age.pristine"
+                         class="alert alert-danger">
+                        Age is required
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="text" class="form-control" id="phone" 
+                    placeholder="Give profile's Phone Number"
+                    required
+                    [(ngModel)]="profile.phone" name="phone" #phone="ngModel">
+                    <div [hidden]="phone.valid || phone.pristine"
+                         class="alert alert-danger">
+                        Phone Number is required
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" class="form-control" id="email" 
+                    placeholder="Give profile's Email"
+                    required
+                    [(ngModel)]="profile.email" name="email" #email="ngModel">
+                    <div [hidden]="email.valid || email.pristine"
+                         class="alert alert-danger">
+                        Email is required
+                    </div>
+                  </div>
+                    
+                   <div class="form-group">
+                    <label for="role">Role</label>
+                    <input type="textarea" class="form-control" id="role" placeholder="Give profile's Role"
+                    required
+                    [(ngModel)]="profile.role" name="role" #role="ngModel">
+                    <div [hidden]="role.valid || role.pristine"
+                         class="alert alert-danger">
+                        Role is required
+                    </div>
+                  </div>
+                    
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" class="form-control" id="city" placeholder="Give profile's City"
+                    requiredAddress
+                    [(ngModel)]="profile.city" name="city" #city="ngModel">
+                    <div [hidden]="city.valid || city.pristine"
+                         class="alert alert-danger">
+                        City is required
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="state">Skills</label>
+                    <input type="text" class="form-control" id="skills" placeholder="Give profile's Skills"
+                    required
+                    [(ngModel)]="profile.skills" name="skills" #skills="ngModel">
+                    <div [hidden]="skills.valid || skills.pristine"
+                         class="alert alert-danger">
+                        Skills are required
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="experience">Experience in years</label>
+                    <input type="text" class="form-control" id="experience" placeholder="Give profile's Experience"
+                    required
+                    [(ngModel)]="profile.experience" name="experience" #experience="ngModel">
+                    <div [hidden]="experience.valid || experience.pristine"
+                         class="alert alert-danger">
+                        Experience in years is required
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="ranking">Ranking</label>
+                    <input type="number" class="form-control" id="ranking" 
+                    placeholder="Give ranking out of 10"
+                    required
+                    [(ngModel)]="profile.ranking" name="ranking" #ranking="ngModel">
+                    <div [hidden]="ranking.valid || ranking.pristine"
+                         class="alert alert-danger">
+                        Ranking is required
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="reviews">Reviews</label>
+                    <input type="textarea" class="form-control" id="reviews" placeholder="Give profile's Reviews"
+                    required
+                    [(ngModel)]="profile.reviews" name="reviews" #reviews="ngModel">
+                    <div [hidden]="reviews.valid || reviews.pristine"
+                         class="alert alert-danger">
+                        Reviews is required
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="imagePath">Image Upload</label>
+                    <input type="text" class="form-control" id="imagePath" placeholder="Give Image Path"
+                    required
+                    [(ngModel)]="profile.imagePath" name="imagePath" #imagePath="ngModel">
+                    <div [hidden]="imagePath.valid || imagePath.pristine"
+                         class="alert alert-danger">
+                        Image Path is required
+                    </div>
+                </div>
+            </div>
+          </div>
                 </div>
             </div>    
         </form>

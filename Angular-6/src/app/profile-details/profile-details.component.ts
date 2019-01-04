@@ -4,6 +4,7 @@ import { ProfileService } from '../profile.service';
 
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Location } from '@angular/common';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-profile-details',
@@ -43,9 +44,16 @@ export class ProfileDetailsComponent implements OnInit {
       this.profileService.deleteProfile(this.profile.id)
         .subscribe(result => this.message = "Profile Deleted Successfully!");
     }
+    location.reload();
+    this.router.navigate(['/profiles']);
   }
 
   goBack(): void {
     this.location.back();
   }
+    
+  logout(): void {
+    this.router.navigate(['/signin']);
+  }
+
 }

@@ -13,6 +13,7 @@ const httpOptions = {
 export class UserService {
   private usersUrl = 'http://localhost:8080/api/users';  // URL to web api
   user: string;
+  isAuthenticated: boolean;
   constructor( 
     private http: HttpClient
   ) { }
@@ -32,19 +33,12 @@ export class UserService {
 
 
   login(email: string): Observable<any> {
-    const url = `${this.usersUrl}/${email}`; 
+    const url = `${this.usersUrl}/${email}`;
     return this.http.get<any>(url); 
   }
   
   addUser(user: User): Observable<User> {
     return this.http.post<User>(this.usersUrl, user, httpOptions);
   }
-  
-  isAuthenticated(){
-     return true; 
-  }   
-    
-  logout() {
-      
-  }
+
 }

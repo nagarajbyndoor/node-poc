@@ -15,6 +15,7 @@ exports.create = (req, res) => {
                 "city": req.body.city,
                 "state": req.body.state,
                 "skills": req.body.skills,
+                "experience": req.body.experience,
                 "ranking": req.body.ranking,
                 "reviews": req.body.reviews,
                 "imagePath": req.body.imagePath

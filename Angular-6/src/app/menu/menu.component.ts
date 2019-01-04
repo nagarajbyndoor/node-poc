@@ -11,15 +11,15 @@ export class MenuComponent implements OnInit {
 
   public isloggedIn: boolean;
   public subscription;
+   
   constructor(private userService: UserService, private router: Router) {
+      
+  }
     
-  }
-
   logout() {
-    this.userService.logout();
-    this.router.navigate(['/sign-in']);
+    this.router.navigate(['/signin']);
   }
-  ngOnInit() {
+  ngOnInit() {     
   }
 
   ngDestroy() {

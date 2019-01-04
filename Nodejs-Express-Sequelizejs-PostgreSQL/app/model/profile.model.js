@@ -30,6 +30,9 @@ module.exports = (sequelize, Sequelize) => {
       skills: {
 		  type: Sequelize.STRING
 	  },
+      experience: {
+		  type: Sequelize.STRING
+	  },
       ranking: {
 		  type: Sequelize.INTEGER
 	  },
